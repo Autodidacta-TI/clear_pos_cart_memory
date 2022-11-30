@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+	
+	<t t-name="RemoveAllOrdersButton" owl="1"> 
+		<div class="oe_status">
+			<i class="fa fa-trash-o" title="Eliminar ordenes en memoria"/>
+		</div> 
+	</t>
+    <t t-inherit="point_of_sale.Chrome" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('status-buttons')]//ProxyStatus" position="before">
+                <RemoveAllOrdersButton/>
+        </xpath>
+   </t>
+
+
+</templates>
